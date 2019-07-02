@@ -62,7 +62,7 @@ function copyObject(src, dest) {
 /**
  * Sorts an array by key, maintaining key to data correlations. This is useful
  * mainly for associative arrays.
- * 
+ *
  * @param arr
  *            The array to sort.
  * @return The sorted array.
@@ -83,7 +83,7 @@ function ksort(arr) {
 
 /**
  * Implement to get Kaltura Client logs
- * 
+ *
  */
 class ILogger {
 	log(msg) {
@@ -118,7 +118,7 @@ class Configuration {
 
 	/**
 	 * Set logger to get kaltura client debug logs.
-	 * 
+	 *
 	 * @param ILogger log
 	 */
 	setLogger(log) {
@@ -127,7 +127,7 @@ class Configuration {
 
 	/**
 	 * Gets the logger (Internal client use)
-	 * 
+	 *
 	 * @return ILogger
 	 */
 	getLogger() {
@@ -137,7 +137,7 @@ class Configuration {
 
 /**
  * Kaltura client constructor
- * 
+ *
  */
 class ClientBase extends kaltura.RequestData {
 
@@ -152,7 +152,7 @@ class ClientBase extends kaltura.RequestData {
 
 	/**
 	 * getter for the referenced configuration object.
-	 * 
+	 *
 	 * @return Configuration
 	 */
 	getConfig() {
@@ -216,7 +216,7 @@ class RequestBuilder extends kaltura.VolatileRequestData {
 
 	/**
 	 * Sign array of parameters for requests validation (CRC).
-	 * 
+	 *
 	 * @param array
 	 *            params service action call parameters that will be sent on the
 	 *            request.
@@ -238,7 +238,7 @@ class RequestBuilder extends kaltura.VolatileRequestData {
 
 	/**
 	 * send the http request.
-	 * 
+	 *
 	 * @return array the results and errors inside an array.
 	 */
 	doHttpRequest(client) {
@@ -297,6 +297,7 @@ class RequestBuilder extends kaltura.VolatileRequestData {
 		else {
 			body = jsonBody;
 		}
+		
 
 		var httpInterface = options.protocol === 'http:' ? http : https;
 		if (client.config.agentOptions) {
